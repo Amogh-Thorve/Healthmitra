@@ -1,13 +1,13 @@
 # 🏥 HealthMitra Scan  
-### *Offline AI-Powered Healthcare Assistant*
+### *AI Healthcare — Anywhere, Even Without Internet*
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Working_Prototype-brightgreen"/>
   <img src="https://img.shields.io/badge/Mode-100%25_Offline-success"/>
-  <img src="https://img.shields.io/badge/AI-LLM%20%2B%20Computer%20Vision-blue"/>
-  <img src="https://img.shields.io/badge/Backend-FastAPI-009688"/>
+  <img src="https://img.shields.io/badge/AI-Computer%20Vision%20%2B%20LLM-blue"/>
+  <img src="https://img.shields.io/badge/Built%20For-Rural%20Healthcare-orange"/>
   <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB"/>
-  <img src="https://img.shields.io/badge/License-MIT-yellow"/>
+  <img src="https://img.shields.io/badge/Backend-FastAPI-009688"/>
 </p>
 
 ---
@@ -15,121 +15,127 @@
 ## 🎬 Demo
 
 <p align="center">
-  <img src="https://via.placeholder.com/900x500.gif?text=HealthMitra+Demo" alt="Demo"/>
+  <img src="./assets/demo.gif" alt="HealthMitra Demo"/>
 </p>
 
-> Replace this with your actual demo GIF (recommended: `/assets/demo.gif`)
+---
+
+## 💡 The Problem
+
+Millions of people still struggle with:
+- ❌ No access to doctors  
+- ❌ Poor understanding of medical reports  
+- ❌ No internet for digital health tools  
+
+Healthcare shouldn’t depend on connectivity.
 
 ---
 
-## ✨ Overview
+## 🚀 The Solution
 
-**HealthMitra Scan** is an **offline-first AI healthcare assistant** designed to make medical insights accessible anywhere — especially in rural and low-resource environments.
+**HealthMitra Scan** is a **fully offline AI healthcare assistant** that:
 
-It combines:
-- 🧠 AI models (Computer Vision + LLMs)  
-- 📄 OCR-based report analysis  
-- ❤️ Risk prediction systems  
-- 🤖 Offline chatbot  
-- 🧑‍⚕️ Patient management  
+- 🩻 Analyzes X-rays  
+- 📄 Explains medical reports  
+- ❤️ Predicts disease risks  
+- 🤖 Answers medical questions  
+- 🧑‍⚕️ Helps healthcare workers manage patients  
 
-> ⚠️ Not a medical device. Always consult a professional.
+👉 All running locally. No internet required.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-### 🩻 X-Ray Sequential AI Agent
+### 🩻 X-Ray AI Agent
+<p align="center">
+  <img src="./assets/xray.gif" width="700"/>
+</p>
+
 - View validation (AP/PA)
 - Pneumonia detection (YOLOv8)
-- Fracture detection (ChexFract + fallback)
-- Bilingual report generation (English + Hindi)
+- Fracture detection (ChexFract)
+- Bilingual report generation
 
 ---
 
-### 📄 Medical Report Explainer
-- Upload PDFs/images  
-- OCR extraction (Tesseract)  
-- Guideline-based classification (ADA, AHA, WHO)  
-- Risk scoring + explanations  
+### 📄 Report Explainer
+<p align="center">
+  <img src="./assets/report.gif" width="700"/>
+</p>
+
+- Upload PDF/image  
+- OCR + medical value extraction  
+- Guideline-based classification  
+- Simple explanations (Hindi + English)  
 
 ---
 
-### ❤️ Future Risk Predictor
-- Inputs: BP, sugar, BMI, cholesterol  
-- Outputs:
+### ❤️ Risk Predictor
+<p align="center">
+  <img src="./assets/risk.gif" width="700"/>
+</p>
+
+- Predicts:
   - Diabetes risk  
   - Heart disease risk  
-  - Emergency alerts  
+- Detects critical conditions early  
 
 ---
 
-### 🤖 Offline Medical Chatbot (RAG)
+### 🤖 Offline Medical Chatbot
+<p align="center">
+  <img src="./assets/chatbot.gif" width="700"/>
+</p>
+
 - Local LLM (Ollama)  
-- ChromaDB vector search  
-- Context-aware, grounded answers  
+- Medical knowledge base (RAG)  
 - Works without internet  
 
 ---
 
-### 🧑‍⚕️ Patient Management
-- SQLite-based registry  
-- Timeline tracking  
-- Dashboard analytics  
+### 🏥 Rural ASHA Mode
+<p align="center">
+  <img src="./assets/rural.gif" width="700"/>
+</p>
 
----
-
-### 🧬 AI Health Twin
-- Digital health profile  
-- Tracks trends + insights  
-
----
-
-### 🏥 Rural ASHA Worker Mode
 - Multi-patient management  
 - Village clustering  
 - Risk prioritization  
-- Visit scheduler  
-- Offline-first design  
+- Visit scheduling  
 
 ---
 
-## 🧠 Highlights
+## 🔥 Why This Matters
 
-- ✅ Fully Offline  
-- 🔒 Privacy-first (local data)  
-- 🌍 Bilingual (English + Hindi)  
-- ⚡ Fast local inference  
-- 🏥 Rural healthcare ready  
+- 🌍 Works in **low-connectivity areas**
+- 🔒 Keeps **all data private**
+- 🧠 Combines **AI + medical logic**
+- ⚡ Enables **early detection & intervention**
 
 ---
 
-## 🛠️ Tech Stack
+## 🧠 Tech Stack
 
 ### Frontend
-- React 18  
-- Vite  
+- React 18 + Vite
 
 ### Backend
-- FastAPI  
-- SQLAlchemy  
-- SQLite  
+- FastAPI + SQLAlchemy + SQLite
 
 ### AI / ML
-- YOLOv8  
-- ChexFract (MAIRA-2)  
-- torchxrayvision  
-- Rule-based models  
+- YOLOv8 (Pneumonia)
+- ChexFract (Fractures)
+- torchxrayvision (Validation)
 
 ### LLM
-- Ollama (Phi-3 / Llama 3)  
-- OpenAI GPT-4o (optional)  
-- Claude / Together AI  
+- Ollama (Phi-3 / Llama 3)
+- GPT-4o / Claude (optional fallback)
 
 ### Data Processing
-- Tesseract OCR  
-- pdfplumber  
-- ChromaDB  
+- Tesseract OCR
+- pdfplumber
+- ChromaDB (RAG)
 
 ---
 
@@ -137,47 +143,34 @@ It combines:
 
 ```mermaid
 flowchart TD
-    A[React Frontend] --> B[FastAPI Backend]
+    A[Frontend] --> B[FastAPI Backend]
     B --> C[AI Models]
     B --> D[OCR Engine]
-    B --> E[LLM Services]
-    B --> F[SQLite Database]
-
-
-Run
+    B --> E[LLM Layer]
+    B --> F[SQLite DB]
+⚡ Quick Start
 git clone https://github.com/your-username/healthmitra-scan.git
 cd healthmitra-scan
 .\run.bat
+🌐 Run Locally
+Frontend → http://localhost:5173
+Backend → http://localhost:8000
+Docs → http://localhost:8000/docs
+📸 Screenshots
+<p align="center"> <img src="./assets/dashboard.png" width="400"/> <img src="./assets/chatbot.png" width="400"/> </p>
+🏆 Impact
 
+HealthMitra is designed for:
 
-📂 Structure
-backend/
-  ├── agents/
-  ├── services/
-  ├── routers/
-  ├── models/
-frontend/
-  ├── src/
-  ├── pages/
-🎯 Use Cases
-Rural healthcare
-Clinics without internet
-Report understanding
-Risk prediction
-AI-assisted diagnostics
-🏆 Roadmap
+🏥 Rural clinics
+👩‍⚕️ ASHA workers
+📄 Patients with no medical knowledge
+🌐 Areas with limited internet
+🚧 Roadmap
  Mobile app
- Voice assistant
- Edge AI optimization
+ Voice-based assistant
  More languages
-🤝 Contributing
-Fork the repo
-Create a branch
-Submit a PR
-📜 License
-
-MIT License
-
+ Edge AI optimization
 👨‍💻 Team
 
 Amogh
@@ -190,6 +183,3 @@ If you like this project:
 ⭐ Star the repo
 🔗 Share it
 🚀 Build on it
-💡 Summary
-
-HealthMitra Scan is a fully offline AI healthcare platform combining computer vision, OCR, and LLMs to deliver intelligent medical insights anywhere.
