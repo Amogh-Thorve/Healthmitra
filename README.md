@@ -165,7 +165,6 @@ HealthMitra is designed for:
  Edge AI optimization
 👨‍💻 Team
 
-Amogh
 Team: Core 4 Codeers
 
 ⭐ Support
