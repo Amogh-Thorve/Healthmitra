@@ -12,14 +12,6 @@
 
 ---
 
-## 🎬 Demo
-
-<p align="center">
-  <img src="./assets/demo.gif" alt="HealthMitra Demo"/>
-</p>
-
----
-
 ## 💡 The Problem
 
 Millions of people still struggle with:
