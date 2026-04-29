@@ -1,172 +1,195 @@
-🏥 HealthMitra Scan
-Offline Multilingual AI Health Assistant
+# 🏥 HealthMitra Scan  
+### *Offline AI-Powered Healthcare Assistant*
 
-⚠️ Informational tool only — not a medical device. Always consult a healthcare professional.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Working_Prototype-brightgreen"/>
+  <img src="https://img.shields.io/badge/Mode-100%25_Offline-success"/>
+  <img src="https://img.shields.io/badge/AI-LLM%20%2B%20Computer%20Vision-blue"/>
+  <img src="https://img.shields.io/badge/Backend-FastAPI-009688"/>
+  <img src="https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow"/>
+</p>
 
-✨ Overview
+---
 
-HealthMitra Scan is a privacy-first, offline AI health platform that combines medical AI models, rule-based systems, and local LLMs to deliver intelligent healthcare insights.
+## 🎬 Demo
 
-🚀 Core Capabilities
-🩻 X-Ray Sequential AI Agent
-Upload chest X-ray → multi-stage analysis pipeline:
-View validation (AP/PA detection)
-Pneumonia detection (YOLOv8)
-Fracture detection (ChexFract + fallback models)
-Bilingual report generation (EN + HI)
-Multi-provider LLM fallback:
-GPT-4o → Claude → Llama → Ollama → Static template
-📄 Clinical Report Intelligence
-Upload PDFs/images
-OCR + structured lab extraction
-Deterministic classification:
-Normal / Borderline / High / Low
-Cardiovascular risk scoring
-Optional AI explanations (local LLM)
-❤️ Vitals Risk Predictor
-Input: age, BMI, BP, sugar, cholesterol, etc.
-Output:
-Diabetes risk (% + level)
-Heart disease risk (% + level)
-Emergency alerts for critical values
-🤖 Medical Chatbot (Offline RAG)
-Uses:
-ChromaDB (local vector DB)
-Sentence Transformers embeddings
-Ollama LLM
-Supports:
-Streaming responses (SSE)
-Context-aware medical answers
-🌐 Gemini AI Assistant (Online, JWT Protected)
-Authenticated chat endpoint
-Multi-model fallback
-Safe fallback responses on quota limits
-🧑‍⚕️ Patient & Health Management
-Patient registry (SQLite)
-Timeline tracking
-Dashboard analytics
-AI-generated “Health Twin”
-🧱 Architecture
-Frontend (React + Vite)
-        ↓
-FastAPI Backend
-        ↓
-├── AI Models (YOLOv8, ChexFract)
-├── OCR (Tesseract)
-├── Rule Engines
-├── Local LLM (Ollama)
-└── SQLite Database
-🛠️ Tech Stack
-Layer	Tech
-Frontend	React 18 + Vite
-Backend	FastAPI + SQLAlchemy
-AI/LLM	Ollama (Phi-3, Llama 3), GPT-4o, Claude
-OCR	Tesseract + pdfplumber
-ML Models	YOLOv8, ChexFract
-Database	SQLite
-⚡ Quick Start
-✅ Prerequisites
-Python 3.10+
-Node.js 18+
-(Optional) Ollama
-(Optional) API keys (OpenAI / Anthropic)
-▶️ One-Command Setup (Recommended)
-cd "C:\Users\amogh\Downloads\Healthmitra-main"
+<p align="center">
+  <img src="https://via.placeholder.com/900x500.gif?text=HealthMitra+Demo" alt="Demo"/>
+</p>
+
+> Replace this with your actual demo GIF (recommended: `/assets/demo.gif`)
+
+---
+
+## ✨ Overview
+
+**HealthMitra Scan** is an **offline-first AI healthcare assistant** designed to make medical insights accessible anywhere — especially in rural and low-resource environments.
+
+It combines:
+- 🧠 AI models (Computer Vision + LLMs)  
+- 📄 OCR-based report analysis  
+- ❤️ Risk prediction systems  
+- 🤖 Offline chatbot  
+- 🧑‍⚕️ Patient management  
+
+> ⚠️ Not a medical device. Always consult a professional.
+
+---
+
+## 🚀 Features
+
+### 🩻 X-Ray Sequential AI Agent
+- View validation (AP/PA)
+- Pneumonia detection (YOLOv8)
+- Fracture detection (ChexFract + fallback)
+- Bilingual report generation (English + Hindi)
+
+---
+
+### 📄 Medical Report Explainer
+- Upload PDFs/images  
+- OCR extraction (Tesseract)  
+- Guideline-based classification (ADA, AHA, WHO)  
+- Risk scoring + explanations  
+
+---
+
+### ❤️ Future Risk Predictor
+- Inputs: BP, sugar, BMI, cholesterol  
+- Outputs:
+  - Diabetes risk  
+  - Heart disease risk  
+  - Emergency alerts  
+
+---
+
+### 🤖 Offline Medical Chatbot (RAG)
+- Local LLM (Ollama)  
+- ChromaDB vector search  
+- Context-aware, grounded answers  
+- Works without internet  
+
+---
+
+### 🧑‍⚕️ Patient Management
+- SQLite-based registry  
+- Timeline tracking  
+- Dashboard analytics  
+
+---
+
+### 🧬 AI Health Twin
+- Digital health profile  
+- Tracks trends + insights  
+
+---
+
+### 🏥 Rural ASHA Worker Mode
+- Multi-patient management  
+- Village clustering  
+- Risk prioritization  
+- Visit scheduler  
+- Offline-first design  
+
+---
+
+## 🧠 Highlights
+
+- ✅ Fully Offline  
+- 🔒 Privacy-first (local data)  
+- 🌍 Bilingual (English + Hindi)  
+- ⚡ Fast local inference  
+- 🏥 Rural healthcare ready  
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React 18  
+- Vite  
+
+### Backend
+- FastAPI  
+- SQLAlchemy  
+- SQLite  
+
+### AI / ML
+- YOLOv8  
+- ChexFract (MAIRA-2)  
+- torchxrayvision  
+- Rule-based models  
+
+### LLM
+- Ollama (Phi-3 / Llama 3)  
+- OpenAI GPT-4o (optional)  
+- Claude / Together AI  
+
+### Data Processing
+- Tesseract OCR  
+- pdfplumber  
+- ChromaDB  
+
+---
+
+## 🧱 Architecture
+
+```mermaid
+flowchart TD
+    A[React Frontend] --> B[FastAPI Backend]
+    B --> C[AI Models]
+    B --> D[OCR Engine]
+    B --> E[LLM Services]
+    B --> F[SQLite Database]
+
+
+Run
+git clone https://github.com/your-username/healthmitra-scan.git
+cd healthmitra-scan
 .\run.bat
 
-👉 Includes:
 
-Backend setup (venv + dependencies)
-Frontend setup (npm install)
-Optional model downloads
-Server launch
-📦 With Model Download
-.\run.bat --download-models
-🌐 Access URLs
-Service	URL
-Backend API	http://localhost:8000
-
-API Docs	http://localhost:8000/docs
-
-Frontend	http://localhost:5173
-🧠 AI Models Overview
-Model	Purpose	Location
-YOLOv8 Chest X-ray	Pneumonia detection	backend/models/yolov8-chest-xray/
-YOLOv8 Fracture	Backup fracture detection	backend/models/yolov8-fracture/
-ChexFract MAIRA-2	Primary fracture model	backend/models/chexfract-maira2/
-
-⚠️ ChexFract size ≈ 3.8GB
-
-🔐 Configuration
-
-Set environment variables:
-
-GEMINI_API_KEY=your_key
-JWT_SECRET=your_secret
-OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_MODEL=phi3
-TESSERACT_CMD=C:\Program Files\Tesseract-OCR\tesseract.exe
-📡 Key API Endpoints
-🔑 Auth
-POST /api/auth/register
-POST /api/auth/login
-GET /api/auth/me
-🩻 X-Ray Agent
-POST /api/xray-agent/analyze
-GET /api/xray-agent/status
-📄 Reports
-POST /api/reports/upload
-GET /api/reports/history
-❤️ Risk Prediction
-POST /api/risk/predict
-🤖 Chatbot
-POST /api/chatbot/ask
-POST /api/chatbot/ask/stream
-🧬 Unique Features
-✅ Fully offline-capable
-🌍 Bilingual (Hindi + English)
-🔒 Privacy-first (local processing)
-🧠 Hybrid AI (ML + LLM + rules)
-🏥 Rural healthcare ready (ASHA mode)
-📊 End-to-end health lifecycle tracking
-🧪 Demo Flow
-Dashboard → overview
-Upload report → OCR + explanation
-Upload X-ray → AI pipeline
-Enter vitals → risk prediction
-View history → timeline
-Health Twin → AI insights
-Rural Mode → multi-patient system
-⚠️ Limitations
-AI predictions may be inaccurate
-Model availability affects results
-Not a substitute for medical diagnosis
-📂 Project Structure
-
-(Condensed view)
-
+📂 Structure
 backend/
   ├── agents/
   ├── services/
   ├── routers/
   ├── models/
 frontend/
+  ├── src/
   ├── pages/
-  ├── components/
-🧩 Developer Notes
+🎯 Use Cases
+Rural healthcare
+Clinics without internet
+Report understanding
+Risk prediction
+AI-assisted diagnostics
+🏆 Roadmap
+ Mobile app
+ Voice assistant
+ Edge AI optimization
+ More languages
+🤝 Contributing
+Fork the repo
+Create a branch
+Submit a PR
+📜 License
 
-Key files:
+MIT License
 
-xray_sequential_agent.py
-clinical_engine.py
-medical_chatbot.py
-ocr_service.py
-🏁 Final Thoughts
+👨‍💻 Team
 
-HealthMitra Scan is designed as a scalable, offline-first healthcare intelligence system, combining:
+Amogh
+Team: Core 4 Codeers
 
-deterministic medical logic
-deep learning models
-modern LLMs
+⭐ Support
 
-—all into a single cohesive platform.
+If you like this project:
+
+⭐ Star the repo
+🔗 Share it
+🚀 Build on it
+💡 Summary
+
+HealthMitra Scan is a fully offline AI healthcare platform combining computer vision, OCR, and LLMs to deliver intelligent medical insights anywhere.
